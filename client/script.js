@@ -1,5 +1,4 @@
-// an event that will initialize the application
-$("#gatherButton").on('click', function(){
+$(document).ready(function(){
   callBaseUrl();
 });
 
@@ -31,15 +30,17 @@ var displayView = function(coin){
     var td_name = $('<td></td>')
     var td_symbol = $('<td></td>')
     var td_value = $('<td></td>')
+    var td_market_cap = $('<td></td>');
     var td_change = $('<td></td>');
 
     th.text(i+1);
     td_name.text(coin[i].name);
     td_symbol.text(coin[i].symbol);
-    td_value.text(coin[i].price_cad);
+    td_value.text('$ ' + coin[i].price_cad);
+    td_market_cap.text(coin[i].market_cap_cad);
     td_change.text(coin[i].percent_change_24h);
 
-    tr.append(th, td_name, td_symbol, td_value, td_change);
+    tr.append(th, td_name, td_symbol, td_value, td_market_cap, td_change);
     
     // append the modified 'tr' to the 'tbody'
     $('#data > tbody').append(tr);
