@@ -1,0 +1,27 @@
+li {
+  list-style: none ;
+}
+.area {
+  margin: 0 auto;
+  text-align: center;
+  margin: 20px;
+}
+
+.area > h1 {
+  margin: 10px;
+  font-size: 45pt;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+}
+#data {
+  margin: 0 auto;
+  text-align: justify;
+}
+
+#gatherButton, #gatherButton:focus, #gatherButton:active {
+   color: #6a6a6a;
+   background-color: transparent;
+   box-shadow: 0 0 0 3px rgba(180, 180, 180, 0.5);
+   border-color: #6a6a6a;
+   
+}
